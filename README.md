@@ -1,1 +1,9 @@
 # cloud2020
+1. cloud-api-common
+    * 工具类、实体类 
+2. cloud-consumer-order80
+    * 服务消费者
+3. cloud-provider-payment8001
+    * 服务提供者
+4. cloud-eureka-server7001
+    * 服务注册中心
