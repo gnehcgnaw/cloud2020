@@ -2,8 +2,20 @@
 1. cloud-api-common
     * 工具类、实体类 
 2. cloud-consumer-order80
-    * 服务消费者
+    * 服务消费者（（eureka））
 3. cloud-provider-payment8001
-    * 服务提供者
+    * 服务提供者（（eureka））
 4. cloud-eureka-server7001
-    * 服务注册中心
+    * 服务注册中心（（eureka））
+5. cloud-eureka-server7002
+    * 服务注册中心（（eureka））
+6. cloud-provider-payment8002
+    * 服务提供者（eureka）
+7. cloud-provider-payment8003
+    * 服务提供者（zookeeper）
+8. cloud-consumerzk-order80
+    * 服务消费者（zookeeper） 
+9. cloud-providerconsul-payment8004
+    * 服务提供者（consul）
+10. cloud-consumerconsul-order80
+    * 服务消费者（consul）

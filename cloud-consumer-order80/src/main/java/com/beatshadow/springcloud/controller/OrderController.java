@@ -3,6 +3,7 @@ package com.beatshadow.springcloud.controller;
 import com.beatshadow.springcloud.common.CommonResult;
 import com.beatshadow.springcloud.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,11 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 @RestController
 public class OrderController {
-    private static final String PAYMENT_URL = "http://localhost:8001";
+    //standalone private static final String PAYMENT_URL = "http://localhost:8001";
+
+    //cluster
+    private static final String PAYMENT_URL = "http://CLOUD-PROVIDER-PAYMENT";
+
     private final RestTemplate restTemplate ;
 
     public OrderController(RestTemplate restTemplate) {
