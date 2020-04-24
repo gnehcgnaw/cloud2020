@@ -1,6 +1,8 @@
 package com.beatshadow.springcloud.service;
 
 import com.beatshadow.springcloud.common.CommonResult;
+import com.beatshadow.springcloud.config.HystrixConfiguration;
+import com.beatshadow.springcloud.hystrix.OrderHystrixService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @since : 2020/4/24 20:30
  */
 @Component
-@FeignClient(name = "cloud-provider-hystrix-payment")
+@FeignClient(name = "cloud-provider-hystrix-payment" ,fallback = OrderHystrixService.class)
 public interface OrderFeignService {
 
     @GetMapping("/hystrix/payment-info/ok/{id}")
