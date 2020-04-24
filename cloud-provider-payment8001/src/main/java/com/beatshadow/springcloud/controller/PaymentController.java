@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author : <a href="mailto:gnehcgnaw@gmail.com">gnehcgnaw</a>
  * @since : 2020/4/21 04:36
@@ -43,5 +45,16 @@ public class PaymentController {
         }else {
             return new CommonResult(444,"查询失败，serverPort is "+serverPort);
         }
+    }
+
+    @GetMapping("/payment/test/feign-timeout")
+    public CommonResult testFeignTimeout(){
+        try {
+            TimeUnit.SECONDS.sleep(6);
+            return new CommonResult(200,"test feign timeout,serverPort is "+serverPort);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return null ;
     }
 }

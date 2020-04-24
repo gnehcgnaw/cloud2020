@@ -12,9 +12,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 @MapperScan(basePackages = "com.beatshadow.springcloud.mapper")
 @SpringBootApplication
-public class PaymentMain8003 {
+public class PaymentZkMain8003 {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8003.class,args);
+        SpringApplication.run(PaymentZkMain8003.class,args);
     }
 
 }

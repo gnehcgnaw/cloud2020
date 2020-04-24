@@ -13,9 +13,11 @@
     * 服务提供者（eureka）
 7. cloud-provider-payment8003
     * 服务提供者（zookeeper）
-8. cloud-consumerzk-order80
+8. cloud-consumer-zk-order80
     * 服务消费者（zookeeper） 
-9. cloud-providerconsul-payment8004
+9. cloud-provider-consul-payment8004
     * 服务提供者（consul）
-10. cloud-consumerconsul-order80
+10. cloud-consumer-consul-order80
     * 服务消费者（consul）
+11. cloud-consumer-feign-order80
+    * 服务消费者（feign）
