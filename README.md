@@ -21,3 +21,7 @@
     * 服务消费者（consul）
 11. cloud-consumer-feign-order80
     * 服务消费者（feign）
+12. cloud-provider-hystrix-payment8005
+    * 服务提供者（hystrix）
+13. cloud-consumer-hystrix-order80
+    * 服务消费者（hystrix）
